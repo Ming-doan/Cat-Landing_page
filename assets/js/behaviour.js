@@ -144,4 +144,4 @@ setInterval(function() {
     }
     currentQuotes++
     catQuotes.innerHTML = quotes[currentQuotes]
-}, 7000)
+}, 2000)

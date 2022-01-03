@@ -102,6 +102,10 @@ a {
     color: var(--text-color-w);
 }
 
+.transparent > .logo-container > img {
+    filter: invert();
+}
+
 .transparent .nav-container-item:last-child {
     background-image: var(--gradient);
     -webkit-background-clip: text;
@@ -252,7 +256,6 @@ a {
     margin: 2rem;
     padding: 4rem 2rem;
     width: 25%;
-    height: 50vh;
     border-radius: 2rem;
     display: flex;
     flex-direction: column;
@@ -341,8 +344,12 @@ a {
 
 .species-section-item {
     display: flex;
-    height: 60vh;
+    /* height: 60vh; */
     background-color: var(--light-color);
+}
+
+.species-section-item:nth-child(even) > .species-section-item-image {
+    order: 1;
 }
 
 .species-section-item-info,
@@ -602,7 +609,8 @@ a {
 
 .modal-close {
     position: absolute;
-    inset: 2rem 2rem auto auto;font-size: 2rem;
+    inset: 2rem 2rem auto auto;
+    font-size: 2rem;
     color: var(--text-color-w);
     z-index: 5;
     cursor: pointer;

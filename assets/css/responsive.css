@@ -1,0 +1,203 @@
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .nav {
+        height: 8rem;
+    }
+    .nav-container-item {
+        font-size: 1.8rem;
+    }
+    .sub-title {
+        font-size: 2rem;
+    }
+    .button-container-item {
+        font-size: 2rem;
+        height: 8rem;
+        width: 20rem;
+        border-radius: 4rem;
+    }
+    .top-title-heading {
+        font-size: 5rem;
+    }
+    .top-title-subheading {
+        font-size: 1.8rem;
+    }
+    .info-section {
+        padding: 0 2rem;
+    }
+    .info-section-items {
+        flex-wrap: wrap;
+    }
+    .info-section-item {
+        width: 50%;
+        margin: 0;
+        padding: 4rem 8rem;
+    }
+    .item-title {
+        font-size: 1.8rem;
+    }
+    .item-subtitle {
+        font-size: 1.6rem;
+    }
+    .species-section {
+        padding: 0 4rem;
+    }
+    .species-section-item-info {
+        padding: 4rem 0;
+    }
+    .species-section-item-btn {
+        font-size: 1.8rem;
+    }
+    .gallery-section-container {
+        padding: 0 4rem;
+    }
+    .row {
+        margin: 0 -1rem;
+    }
+    .column {
+        width: 50%;
+        flex: none;
+        box-sizing: border-box;
+    }
+    .video-title {
+        font-size: 4rem;
+    }
+    .video-subtitle {
+        font-size: 1.8rem;
+    }
+    .video-btn {
+        width: 8rem;
+        height: 8rem;
+    }
+    .video-btn > i {
+        font-size: 1.6rem;
+    }
+    .footer {
+        padding: 4rem;
+    }
+    .footer-info-contents {
+        font-size: 2.2rem;
+    }
+    .footer-comment #comment,
+    .footer-comment .email {
+        font-size: 1.8rem;
+        padding: 2rem;
+    }
+    .footer-comment .submit-btn {
+        width: 12rem;
+        height: 6rem;
+        font-size: 1.8rem;
+    }
+    .modal-image > img {
+        height: auto;
+        width: 90vw;
+    }
+    .modal-close {
+        font-size: 4rem;
+        inset: 4rem 4rem auto auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .nav {
+        padding: 0 2rem;
+        height: 6rem;
+    }
+    .nav-container {
+        display: none;
+    }
+    .title {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem;
+    }
+    .sub-title {
+        word-wrap: break-word;
+        text-align: center;
+    }
+    .button-container-item:first-child {
+        margin-right: 2rem;
+    }
+    .top-title-heading {
+        text-align: center;
+    }
+    .top-title-subheading {
+        font-size: 1.8rem;
+    }
+    .info-section {
+        padding: 0 2rem;
+    }
+    .info-section-items {
+        flex-direction: column;
+    }
+    .info-section-item {
+        margin: 0;
+        width: 100%;
+    }
+    .item-title {
+        font-size: 2.4rem;
+    }
+    .item-subtitle {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    .species-section {
+        padding: 0 2rem;
+    }
+    .species-section-items {
+        overflow: auto;
+        border-radius: unset;
+    }
+    .species-section-item {
+        flex-direction: column;
+        height: unset;
+        margin-bottom: 2rem;
+        border-radius: 2rem;
+        height: fit-content;
+        overflow: hidden;
+    }
+    .species-section-item:nth-child(even) > .species-section-item-info {
+        order: 1;
+    }
+    .species-section-item-image {
+        width: 100%;
+    }
+    .species-section-item-info {
+        padding: 1rem 0;
+        width: 100%;
+    }
+    .species-section-item-subheading {
+        padding: 1rem 4rem;
+    }
+    .gallery-section-container {
+        padding: 0 2rem;
+    }
+    .row {
+        margin: 0 -1rem;
+    }
+    .column {
+        flex: unset;
+    }
+    .item-1-1 {
+        aspect-ratio: unset;
+        text-align: center;
+    }
+    .item-1-1 > .video-btn{
+        display: unset;
+    }
+    .item-1-2 {
+        aspect-ratio: unset;
+    }
+    .footer {
+        padding: 2rem;
+        flex-direction: column-reverse;
+    }
+    .footer-info,
+    .footer-comment {
+        width: 100%;
+        text-align: center;
+    }
+    .modal-image > img {
+        height: unset;
+        width: 100vw;
+    }
+}

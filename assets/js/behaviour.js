@@ -1,17 +1,24 @@
 // Scroll navigation bar
 const navbar = document.querySelector(".nav")
 let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+const moverToHeader = document.querySelector(".move-to-header")
+moverToHeader.addEventListener('click', function() {
+    window.location = '#header'
+})
+
 window.onscroll = function() {
     let currentPosition = window.pageYOffset;
     // console.log(currentPosition)
     if (currentPosition === 0) {
         navbar.classList.add("transparent")
+        moverToHeader.classList.add("hidden")
     }
     if (currentPosition > 0) {
         navbar.classList.remove("transparent")
     }
     if (currentPosition >= 616) {
         scrollDetect("home")
+        moverToHeader.classList.remove("hidden")
     }
     if (currentPosition >= 1316) {
         scrollDetect("species")

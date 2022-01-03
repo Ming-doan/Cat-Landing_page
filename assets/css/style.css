@@ -569,6 +569,33 @@ a {
     opacity: .8;
 }
 
+.move-to-header {
+    position: fixed;
+    inset: auto 2rem 2rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    width: 2rem;
+    height: 2rem;
+    padding: 2rem;
+    border-radius: 50%;
+    background-color: var(--text-color-w);
+    box-shadow: 0 0 5px 0 var(--shadow-color);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.move-to-header > i {
+    background-image: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hidden {
+    transform: scale(0);
+}
+
 /* Modals */
 .gallery-modal {
     position: fixed;

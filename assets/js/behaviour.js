@@ -49,6 +49,25 @@ function scrollDetect(current) {
     }
 }
 
+// Menu Burger
+const menuBurger = document.querySelector(".menu-burger")
+const menuContainer = document.querySelector(".menu-burger-container")
+const menuBurgerItem = document.querySelectorAll(".burger-container-item:not(:last-child)")
+for(let i = 0; i < menuBurgerItem.length; i++) {
+    menuBurgerItem[i].addEventListener('click', toggleMenu)
+}
+menuBurger.addEventListener('click', toggleMenu)
+
+function toggleMenu() {
+    menuBurger.classList.toggle('open')
+    menuBurger.querySelector(".menu-burger-bar").classList.toggle("black")
+    if(menuBurger.classList.contains("open")) {
+        menuContainer.style.transform = "translateX(0)"
+    } else if (!menuBurger.classList.contains("open")) {
+        menuContainer.style.transform = "translateX(100%)"
+    }
+}
+
 // Button Links
 const wikiBtn = document.querySelector("#wiki");
 wikiBtn.addEventListener("click", function() {

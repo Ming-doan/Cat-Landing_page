@@ -112,6 +112,64 @@ a {
     -webkit-text-fill-color: transparent;
 }
 
+.menu-burger {
+    display: none;
+    position: absolute;
+    inset: 50% 0 auto auto;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.menu-burger-bar {
+    width: 2.4rem;
+    height: .2rem;
+    background-color: var(--text-color-b);
+    border-radius: .1rem;
+    transition: .3s;
+}
+
+.transparent .menu-burger .menu-burger-bar,
+.transparent .menu-burger .menu-burger-bar::before,
+.transparent .menu-burger .menu-burger-bar::after {
+    background-color: var(--text-color-w);
+}
+
+.black.menu-burger-bar::before,
+.black.menu-burger-bar::after {
+    background-color: var(--text-color-b) !important;
+}
+
+.menu-burger-bar::before,
+.menu-burger-bar::after {
+    content: "";
+    background-color: var(--text-color-b);
+    position: absolute;
+    inset: calc(100% + .5rem) 0 auto auto;
+    width: 2.8rem;
+    height: .2rem;
+    border-radius: .1rem;
+    transition: .3s;
+}
+
+.menu-burger-bar::before {
+    width: 2rem;
+    inset: auto 0 calc(100% + .5rem) auto;
+}
+
+.menu-burger.open > .menu-burger-bar {
+    background-color: transparent;
+}
+
+.menu-burger.open .menu-burger-bar::before {
+    width: 2.4rem;
+    transform: rotate(45deg) translate(.5rem, .5rem);
+}
+
+.menu-burger.open .menu-burger-bar::after {
+    width: 2.4rem;
+    transform: rotate(-45deg) translate(.5rem, -.5rem);
+}
+
 .image-cover {
     background-image: url("../system_images/heading-cover.jpg");
     background-position: center;
@@ -641,4 +699,41 @@ a {
     color: var(--text-color-w);
     z-index: 5;
     cursor: pointer;
+}
+
+/* Burger menu */
+.menu-burger-container {
+    position: fixed;
+    inset: 0 0 0 0;
+    background-color: var(--text-color-w);
+    z-index: 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+    transform: translateX(100%);
+}
+
+.burger-container-item {
+    font-size: 3.6rem;
+    color: var(--text-color-b);
+    line-height: 8rem;
+    position: relative;
+}
+
+.burger-container-item:last-child {
+    background-image: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.burger-container-item:not(:last-child)::after {
+    content: "";
+    width: 8rem;
+    height: 0.4rem;
+    position: absolute;
+    inset: 80% 0 auto 50%;
+    transform: translateX(-50%);
+    background-image: var(--gradient);
 }

@@ -105,6 +105,9 @@
     .nav-container {
         display: none;
     }
+    .menu-burger {
+        display: block;
+    }
     .title {
         flex-direction: column;
         align-items: flex-start;

@@ -1,3 +1,12 @@
+function lockScroll(status) {
+    const body = document.querySelector("body")
+    if (status) {
+        body.style.overflowY = "hidden"
+    } else {
+        body.style.overflowY = "auto"
+    }
+}
+
 // Scroll navigation bar
 const navbar = document.querySelector(".nav")
 let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -63,8 +72,10 @@ function toggleMenu() {
     menuBurger.querySelector(".menu-burger-bar").classList.toggle("black")
     if(menuBurger.classList.contains("open")) {
         menuContainer.style.transform = "translateX(0)"
+        lockScroll(true)
     } else if (!menuBurger.classList.contains("open")) {
         menuContainer.style.transform = "translateX(100%)"
+        lockScroll(false)
     }
 }
 
@@ -115,14 +126,17 @@ for(let i = 0; i < image.length; i++) {
         </div>
         `
         modalContainer.innerHTML = modalUI;
+        lockScroll(true)
         const galleryModal = document.querySelector(".gallery-modal");
         const modalOverlay = document.querySelector(".modal-overlay");
         const modalClose = document.querySelector(".modal-close");
         modalOverlay.addEventListener("click", function() {
             galleryModal.remove()
+            lockScroll(false)
         })
         modalClose.addEventListener("click", function() {
             galleryModal.remove()
+            lockScroll(false)
         })
     }
 }
@@ -132,7 +146,7 @@ playBtn.addEventListener('click', function() {
     let modalUI = `
     <div class="gallery-modal">
         <div class="modal-image">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/eX2qFMC8cFo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/eX2qFMC8cFo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div class="modal-close">
             <i class="fas fa-times"></i>
@@ -141,14 +155,17 @@ playBtn.addEventListener('click', function() {
     </div>
     `
     modalContainer.innerHTML = modalUI;
+    lockScroll(true)
     const galleryModal = document.querySelector(".gallery-modal");
     const modalOverlay = document.querySelector(".modal-overlay");
     const modalClose = document.querySelector(".modal-close");
     modalOverlay.addEventListener("click", function() {
         galleryModal.remove()
+        lockScroll(false)
     })
     modalClose.addEventListener("click", function() {
         galleryModal.remove()
+        lockScroll(false)
     })
 })
 

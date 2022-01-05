@@ -1,5 +1,8 @@
 /* Tablets */
 @media (min-width: 768px) and (max-width: 1024px) {
+    iframe {
+        width: 80%;
+    }
     .nav {
         height: 8rem;
     }
@@ -98,6 +101,9 @@
 }
 
 @media (max-width: 767px) {
+    iframe {
+        width: 100%;
+    }
     .nav {
         padding: 0 2rem;
         height: 6rem;

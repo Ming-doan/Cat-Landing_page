@@ -24,6 +24,10 @@ a {
     text-decoration: none;
 }
 
+iframe {
+    height: 80%;
+}
+
 .nav {
     position: fixed;
     inset: 0 0 auto 0;

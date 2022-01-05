@@ -672,7 +672,7 @@ textarea {
 .modal-overlay {
     position: absolute;
     inset: 0 0 0 0;
-    background-color: rgba(0, 0, 0, .4);
+    background-color: rgba(0, 0, 0, .7);
     z-index: 4;
     cursor: pointer;
 }
